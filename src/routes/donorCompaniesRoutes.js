@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 
 router.use(bodyParser.json());
 
-// Array para armazenar as empresas doadoras
+// Array para armazenar as empresas/pessoas doadoras, 
 let donorCompanies = [
   {
     id: 1,
@@ -15,9 +15,9 @@ let donorCompanies = [
   },
   {
     id: 2,
-    name: 'Empresa XYZ',
+    name: 'pessoa XYZ',
     phone: '222222222',
-    email: 'empresaxyz@example.com',
+    email: 'pessoa@example.com',
     donationType: 'Empréstimo de notebook',
   },
   {
@@ -29,12 +29,12 @@ let donorCompanies = [
   },
 ];
 
-// Rota para listar todas as empresas doadoras
+// Rota para listar todas as empresas ou pessoas que farão doações
 router.get('/', (req, res) => {
   res.json(donorCompanies);
 });
 
-// Rota para cadastrar uma nova empresa doadora
+// Rota para cadastrar uma nova empresa ou pessoa doadora
 router.post('/', (req, res) => {
   const { name, phone, email, donationType } = req.body;
 
@@ -47,10 +47,10 @@ router.post('/', (req, res) => {
     return res.status(400).json({ error: 'Por favor, forneça um email válido.' });
   }
 
-  // Gere um ID único para a nova empresa doadora
+  // Gerador ID único para a nova empresa ou pessoa 
   const newId = donorCompanies.length > 0 ? donorCompanies[donorCompanies.length - 1].id + 1 : 1;
 
-  // Crie o objeto da nova empresa doadora
+  // Aqui crio o objeto da nova empresa doadora
   const newDonorCompany = {
     id: newId,
     name,
@@ -59,10 +59,10 @@ router.post('/', (req, res) => {
     donationType,
   };
 
-  // Adicione a nova empresa doadora ao array
+  // Aqui adiciona a nova empresa doadora no array
   donorCompanies.push(newDonorCompany);
 
-  // Retorne a empresa doadora recém-cadastrada como resposta
+  // Aqui retorne a empresa doadora recém-cadastrada como resposta
   res.status(201).json(newDonorCompany);
 });
 

@@ -3,27 +3,27 @@
 const express = require('express');
 const router = express.Router();
 
-// Rota fictícia para listar todas as instituições gratuitas
+// Rota fictícia com listasde instituições gratuitas, se der tempo buscar instituições reais, olhar também se pode.
 router.get('/institutions', (req, res) => {
   const institutions = [
     {
       id: 1,
       name: 'Creche Feliz',
-      address: 'Rua das Crianças, 123',
-      phone: '(11) 1234-5678'
+      address: 'Rua blablabla, 123',
+      phone: '(31) 1234-5678'
     },
     {
       id: 2,
       name: 'Cuidando Juntos',
-      address: 'Av. dos Pequeninos, 456',
-      phone: '(11) 9876-5432'
+      address: 'Av. dos Pinheiros, 321',
+      phone: '(31) 8765-4321'
     },
     // Mais instituições fictícias...
   ];
   res.json(institutions);
 });
 
-// Rota fictícia para listar todos os projetos do governo
+// Rota fictícia onde listo os projetos do governo, se der tempo buscar projetos reais
 router.get('/government-projects', (req, res) => {
   const governmentProjects = [
     {
@@ -38,7 +38,7 @@ router.get('/government-projects', (req, res) => {
       description: 'Projeto de segurança infantil nas escolas',
       contact: 'crianca-segura@gov.br'
     },
-    // Mais projetos fictícios...
+    // se der tempo cadastrar mais projetos
   ];
   res.json(governmentProjects);
 });

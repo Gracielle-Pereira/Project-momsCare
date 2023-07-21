@@ -7,7 +7,7 @@ motherController.getAllMothers = async (req, res) => {
     const mothers = await Mother.find();
     res.json(mothers);
   } catch (error) {
-    res.status(500).json({ message: 'Erro ao buscar as mães' });
+    res.status(500).json({ message: 'Erro ao buscar as mães no cadastro' });
   }
 };
 
@@ -19,7 +19,7 @@ motherController.createMother = async (req, res) => {
     await mother.save();
     res.status(201).json(mother);
   } catch (error) {
-    res.status(500).json({ message: 'Erro ao criar a mãe' });
+    res.status(500).json({ message: 'Erro ao criar cadastro da mãe' });
   }
 };
 
@@ -35,7 +35,7 @@ motherController.updateMother = async (req, res) => {
     );
     res.json(updatedMother);
   } catch (error) {
-    res.status(500).json({ message: 'Erro ao atualizar a mãe' });
+    res.status(500).json({ message: 'Erro ao atualizar a mãe no cadastro' });
   }
 };
 
@@ -44,9 +44,9 @@ motherController.deleteMother = async (req, res) => {
 
   try {
     await Mother.findByIdAndDelete(id);
-    res.json({ message: 'Mãe deletada com sucesso' });
+    res.json({ message: 'Mãe deletada do sistema com sucesso' });
   } catch (error) {
-    res.status(500).json({ message: 'Erro ao deletar a mãe' });
+    res.status(500).json({ message: 'Erro ao deletar a mãe do cadastro' });
   }
 };
 
