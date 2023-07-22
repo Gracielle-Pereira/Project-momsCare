@@ -7,12 +7,14 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "body-parser": "^1.20.2",
     "cors": "^2.8.5",
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.1",
     "mongoose": "^7.4.0",
-    "swagger-jsdoc": "^6.2.8",
+    "swagger-autogen": "^2.23.5",
     "swagger-ui-express": "^5.0.0"
   },
   "devDependencies": {
@@ -21,6 +23,8 @@
     "mocha": "^10.2.0"
   },
   "scripts": {
-    "test": "mocha tests/**/*.test.js"
+    "test": "mocha tests/**/*.test.js",
+    "swagger-autogen": "node swagger.js"
+
   }
 }
