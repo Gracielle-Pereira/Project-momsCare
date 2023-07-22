@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const motherController = require('./src/controllers/montherController');
+const motherController = require('../controllers/motherController');
 
 // Rota para listar todas as mães
 router.get('/', motherController.getAllMothers);

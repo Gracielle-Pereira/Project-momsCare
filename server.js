@@ -3,13 +3,13 @@ const express = require('express');
 const connectDB = require('./src/database/connection');
 const motherRoutes = require('./src/routes/motherRoutes');
 const childcareRoutes = require('./src/routes/childcareRoutes');
-const donorCompaniesRoutes = require('./src/routes/donorCompaniesRoutes'); 
-
-// Carregar variáveis de ambiente
-require('dotenv').config();
+const donorCompaniesRoutes = require('./src/routes/donorCompaniesRoutes');
 
 // Inicializar o servidor Express
 const app = express();
+
+// Carregar variáveis de ambiente
+require('dotenv').config();
 
 // Conectar ao banco de dados MongoDB
 connectDB();
@@ -32,6 +32,9 @@ app.get('/', (req, res) => {
 const PORT = process.env.PORT || 5000;
 
 // Inicializar o servidor
-app.listen(PORT, () => {
+const server = app.listen(PORT, () => {
   console.log(`Servidor rodando na porta ${PORT}`);
 });
+
+// Exportar o servidor para uso nos testes
+module.exports = server;
