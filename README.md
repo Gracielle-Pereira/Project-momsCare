@@ -1,6 +1,6 @@
 MomsCare API
 
-A MomsCare API é uma aplicação que visa fornecer suporte para mães estudantes que desejam cuidar de seus filhos enquanto buscam sua educação. 
+A MomsCare API é uma aplicação que visa fornecer suporte para mães estudantes que desejam cuidar de seus filhos enquanto buscam seu desenvolvimento através dos estudos. 
 A API oferece funcionalidades para cadastrar informações sobre mães, instituições gratuitas que cuidam de crianças e projetos do governo voltados para apoio materno.
 Fornece também a funcionalidade para cadastro de pessoas que querem doar recursos, emprestar notbooks etc.
 
