@@ -6,7 +6,7 @@ chai.use(chaiHttp);
 
 const app = require('../src/app/app');
 
-describe('Rota /childcare/institutions', () => {
+describe('Rota /donor-companies', () => {
   let server;
 
   before((done) => {
@@ -17,10 +17,10 @@ describe('Rota /childcare/institutions', () => {
     server.close(done);
   });
 
-  it('Deve retornar uma lista de instituições', (done) => {
+  it('Deve retornar uma lista de empresas doadoras', (done) => {
     chai
       .request(server)
-      .get('/childcare/institutions')
+      .get('/donor-companies')
       .end((err, res) => {
         expect(err).to.be.null;
         expect(res).to.have.status(200); // Status code 200, não 500

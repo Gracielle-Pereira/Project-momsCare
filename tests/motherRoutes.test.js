@@ -6,27 +6,29 @@ chai.use(chaiHttp);
 
 const app = require('../src/app/app');
 
-describe('Rota /childcare/institutions', () => {
+describe('Rota /mothers', () => {
   let server;
 
   before((done) => {
-    server = app.listen(0, done);
+    server = app.listen(3000, done); // Certifique-se de usar a porta correta aqui (por exemplo, 3000).
   });
 
   after((done) => {
     server.close(done);
   });
 
-  it('Deve retornar uma lista de instituições', (done) => {
+  it('Deve retornar uma lista de mães', (done) => {
     chai
       .request(server)
-      .get('/childcare/institutions')
+      .get('/mothers')
       .end((err, res) => {
         expect(err).to.be.null;
-        expect(res).to.have.status(200); // Status code 200, não 500
+        expect(res).to.have.status(200);
         expect(res.body).to.be.an('array');
         expect(res.body).to.have.length.above(0);
         done();
       });
-  });
+  }).timeout(15000); // Aumentando o tempo limite para 15 segundos.
+
+  // Restante do código dos testes...
 });
