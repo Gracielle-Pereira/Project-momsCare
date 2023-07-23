@@ -28,6 +28,46 @@ Cadastro de Empresas Doadoras:
 
 Cadastrar informações de empresas que desejam fazer doações para as mães estudantes. As doações podem ser em formato de bolsas de estudos, empréstimo de notebooks, entre outros.
 
+Estrutura do projeto
+
+projetoFinal
+|-- MomsCare
+|   |-- src
+|   |   |-- app
+|   |   |   |-- app.js
+|   |   |-- controllers
+|   |   |   |-- motherController.js
+|   |   |   |-- childcareController.js
+|   |   |   |-- donorCompaniesController.js
+|   |   |-- database
+|   |   |   |-- connection.js
+|   |   |-- JWT
+|   |   |   |-- authMiddleware.js
+|   |   |-- models
+|   |   |   |-- childcare.js
+|   |   |   |-- donorCompany.js
+|   |   |   |-- mother.js
+|   |   |   |-- user.js
+|   |   |-- routes
+|   |   |   |-- authRoutes.js
+|   |   |   |-- motherRoutes.js
+|   |   |   |-- childcareRoutes.js
+|   |   |   |-- donorCompaniesRoutes.js
+|   |-- swagger
+|   |   |-- swagger_output.json
+|   |-- tests
+|   |   |-- childcareRoutes.test.js
+|   |   |-- motherRoutes.test.js
+|   |   |-- donorCompaniesRoutes.test.js
+|   |-- .env
+|   |-- .env.exemple
+|   |-- .gitignore
+|   |-- package-lock.json
+|   |-- package.json
+|   |-- README.md
+|   |-- server.js
+|   |-- swagger.js
+
 
 Tecnologias Utilizadas
 
