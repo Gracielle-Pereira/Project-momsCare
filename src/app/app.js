@@ -10,7 +10,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 // Configurar a documentação do Swagger
-const swaggerFile = require(path.join(__dirname, '..', '..', 'swagger', 'swagger_output.json'));
+const swaggerFile = require(path.join(__dirname, '..', 'swagger', 'swagger_output.json'));
 app.use('/minha-rota-de-documentacao', swaggerUi.serve, swaggerUi.setup(swaggerFile));
 
 // Definir as rotas da API
