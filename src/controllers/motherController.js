@@ -35,6 +35,7 @@ motherController.createMother = async (req, res) => {
     await mother.save();
     res.status(201).json(mother);
   } catch (error) {
+    console.error(error);
     res.status(500).json({ message: 'Erro ao cadastrar a mãe' });
   }
 };

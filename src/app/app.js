@@ -17,10 +17,14 @@ app.use('/minha-rota-de-documentacao', swaggerUi.serve, swaggerUi.setup(swaggerF
 const motherRoutes = require('../routes/motherRoutes');
 const childcareRoutes = require('../routes/childcareRoutes');
 const donorCompaniesRoutes = require('../routes/donorCompaniesRoutes');
+const authRoutes = require('../routes/authRoutes'); // Importe o arquivo authRoutes.js
 
 app.use('/mothers', motherRoutes);
 app.use('/childcare', childcareRoutes);
 app.use('/donor-companies', donorCompaniesRoutes);
+
+// Adicione as rotas de autenticação
+app.use('/auth', authRoutes);
 
 // Rota de teste
 app.get('/', (req, res) => {
