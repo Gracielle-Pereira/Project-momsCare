@@ -46,7 +46,7 @@ A MomsCare API é uma aplicação que visa fornecer suporte para mães estudante
 2. Execute `npm install` para instalar as dependências do projeto.
 3. Crie um arquivo `.env` na raiz do projeto e defina as variáveis de ambiente necessárias, como a conexão com o banco de dados MongoDB.
 4. Execute `npm start` para iniciar o servidor.
-5. Acesse a documentação da API em //colocaraqui
+5. Acesse a documentação da API em [Swagger](http://localhost:3000/minha-rota-de-documentacao/#/default/get)
 
 ## Como Usar
 
